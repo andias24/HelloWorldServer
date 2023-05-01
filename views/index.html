@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrea's Book Reviews</title>
+    <title>Book Reviews</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <style>
+        .card {
+            width:500px;
+        }
+    </style>
+
+</head>
+
+<body class="orange lighten-5">
+    <header>
+        <nav class="teal darken-4">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">Andrea's Book Reviews</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/to-be-read">To Be Read</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <ul class="sidenav" id="mobile-nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Book Reviews</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <main>
+        <div class="container">
+            <div class ="">
+                
+                <h2>Book Reviews</h2>
+            </div>
+            <div class="center-align">
+                <div class="s12">
+                    <div class="card">
+                        <div class="card-image">
+                            <img width="100px" src="/images/prideandprejudice.jpg">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title">Book Title: Pride and Prejudice</span>
+                            <p>Author Name: Jane Austen</p>
+                            <p>Rating: 4.5/5</p>
+                            <p>Two very stubborn people in love --> Very Enemies to lover. </p>
+                        </div>
+                        <div class="section">
+                            <a class="btn waves-effect modal-trigger" href="#edit"><i class="material-icons right">edit</i>Edit</a>
+                        </div>
+                        <div class="modal" id="edit">
+                            <form id="updateForm">
+                                <div class="row">
+                                    <div class="input-field col s8">
+                                        <input type="text" id="titleInput" name="title" class="validate" data-length="45" required value="Pride and Prejudice">
+                                        <label for="titleInput">Book Title:</label>
+                                    </div>
+                                    <div class="input-field col s4">
+                                        <input type="number" id="priorityInput" name="priority" class="validate" min=0 max=5 value=4.5>
+                                        <label for="priorityInput">Ranking (0-5):</label>
+                                    </div>
+            
+                                    <div class="input-field col s12">
+                                        <textarea class="materialize-textarea" id="descriptionInput" name="description" data-length="150">Two very stubborn people in love --> Very Enemies to lover.</textarea>
+                                        <label for="descriptionInput">Detailed Description:</label>
+                                    </div>
+                
+                                </div>
+                            </form>
+                            <div class="modal-footer">
+                                <!-- Since the submit button is not within the form, it must have the form attribute specified-->
+                                <button class="btn waves-effect waves-light " type="submit" form="updateForm">
+                                    <i class="material-icons right">send</i>
+                                    Submit
+                                </button>
+                                <button class="modal-close waves-effect waves-green btn-flat" >Never Mind</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="s12">
+                    <div class="card">
+                        <div class="card-image">
+                            <img class="responsive-img" src="/images/brotherkarmazov.jpg">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title">Book Title: The Brothers Karmazov</span>
+                            <p>Author Name: Fyodor Dosotoevsky</p>
+                            <p>Rating: 4/5</p>
+                            <p>Family murder mystery!!! "And she tortures me, tortures me with her love."</p>
+                        </div>
+                        <div class="section">
+                            <a class="btn waves-effect modal-trigger" href="#edit2"><i class="material-icons right">edit</i>Edit</a>
+                        </div>
+                        <div class="modal" id="edit2">
+                            <form id="updateForm">
+                                <div class="row">
+                                    <div class="input-field col s8">
+                                        <input type="text" id="titleInput" name="title" class="validate" data-length="45" required value="Brother's Karamzov">
+                                        <label for="titleInput">Book Title:</label>
+                                    </div>
+                                    <div class="input-field col s4">
+                                        <input type="number" id="priorityInput" name="priority" class="validate" min=0 max=5 value=3>
+                                        <label for="priorityInput">Ranking (0-5):</label>
+                                    </div>
+            
+                                    <div class="input-field col s12">
+                                        <textarea class="materialize-textarea" id="descriptionInput" name="description" data-length="150">Family murder mystery!!! "And she tortures me, tortures me with her love."</textarea>
+                                        <label for="descriptionInput">Detailed Description:</label>
+                                    </div>
+                
+                                </div>
+                            </form>
+                            <div class="modal-footer">
+                                <!-- Since the submit button is not within the form, it must have the form attribute specified-->
+                                <button class="btn waves-effect waves-light " type="submit" form="updateForm">
+                                    <i class="material-icons right">send</i>
+                                    Submit
+                                </button>
+                                <button class="modal-close waves-effect waves-green btn-flat" >Never Mind</button>
+                            </div>
+                            
+                        </div>
+                        </div>
+                    </div>
+                </div>
+              
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+                <script src="/scripts/materializeAutoInit.js"></script> 
+
+    </main>
+</body>
+</html>
